@@ -27,7 +27,7 @@ body {
     flex-direction: column;
     justify-content: center;
     row-gap: 2rem;
-    transition: 2s;
+    transition: 0.3s;
 }
 
 .input-section {
@@ -87,7 +87,7 @@ body {
 
 @media screen and (max-width: 550px) {
     .container {
-        border-radius: 1rem;
+        border-radius: 0rem;
     }
     .input-bar {
         flex-direction: column;

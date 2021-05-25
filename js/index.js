@@ -1,12 +1,12 @@
 //Variable Section
 let submitBtn = document.getElementById("submit");
 let idate;
-//Calling API and storing in a variable
-let myjson1;
-let myjson2;
 let session;
 let apiResult;
 
+//Calling API and storing in a variable
+// let myjson1;
+// let myjson2;
 async function getByPinCode() {
     getDate();
     let pincode = document.getElementById("input-pincode").value;
@@ -27,8 +27,15 @@ function getDate() {
 
 function getTable() {
 
-    document.getElementById("slots").innerHTML = "";
+    if (!apiResult) {
+        document.getElementsByClassName("message")[0].innerHTML = "No Records<br><p>Please Refresh the page</p>";
+        document.getElementsByTagName("BODY")[0].style.height = "100vh";
+    }
     if (apiResult) {
+
+        document.getElementsByClassName("output-section")[0].style.display = "block";
+        document.getElementById("slots").innerHTML = "";
+        document.getElementsByTagName("BODY")[0].style.height = "auto";
         document.getElementById("name").innerText = apiResult.name;
         document.getElementById("available_capacity").innerText = apiResult.available_capacity;
         document.getElementById("available_capacity_dose1").innerText = apiResult.available_capacity_dose1;
@@ -46,16 +53,13 @@ function getTable() {
         for (let i = 0; i < apiResult.slots.length; i++) {
             document.getElementById("slots").innerHTML += apiResult.slots[i] + "<br>";
         }
-    } else {
-        document.getElementsByClassName("output-section")[0].innerHTML = "No Records";
     }
 };
 
 submitBtn.addEventListener('click', () => {
-    document.getElementsByClassName("output-section")[0].style.display = "block";
     if (document.getElementById("input-pincode").value.length == 6) {
         getByPinCode();
     } else {
-        document.getElementsByClassName("output-section")[0].innerHTML = '<h4 style="color: red">Invalid PinCode </h4><br><p>Please Refresh the page</p>';
+        document.getElementsByClassName("message")[0].innerHTML = '<h4 style="color: red">Invalid PinCode </h4>';
     }
 });
