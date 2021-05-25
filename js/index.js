@@ -29,13 +29,12 @@ function getTable() {
 
     if (!apiResult) {
         document.getElementsByClassName("output-section")[0].style.display = "none";
-        document.getElementsByClassName("message")[0].innerHTML = "No Records<br><p>Please Refresh the page</p>";
-        document.getElementsByTagName("BODY")[0].style.height = "100vh";
+        document.getElementsByClassName("message")[0].innerHTML = "No Records<br><p>Pobably the center has not updated the data.</p>";
+        // document.getElementsByTagName("BODY")[0].style.height = "100vh";
     }
     if (apiResult) {
         document.getElementsByClassName("output-section")[0].style.display = "block";
         document.getElementById("slots").innerHTML = "";
-        document.getElementsByTagName("BODY")[0].style.height = "auto";
         document.getElementById("name").innerText = apiResult.name;
         document.getElementById("available_capacity").innerText = apiResult.available_capacity;
         document.getElementById("available_capacity_dose1").innerText = apiResult.available_capacity_dose1;
@@ -60,6 +59,7 @@ submitBtn.addEventListener('click', () => {
     if (document.getElementById("input-pincode").value.length == 6) {
         getByPinCode();
     } else {
+        document.getElementsByClassName("output-section")[0].style.display = "none";
         document.getElementsByClassName("message")[0].innerHTML = '<h4 style="color: red">Invalid PinCode </h4>';
     }
 });
