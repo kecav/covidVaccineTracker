@@ -36,7 +36,7 @@ function getTable() {
         //Eliminating errors and  adding UI changes for Success
         document.getElementsByClassName("output-section")[0].style.display = "block";
         document.getElementById("slots").innerHTML = "";
-        document.getElementsByClassName("message")[0] = "";
+        document.getElementsByClassName("message")[0].innerHTML = "";
 
         //Displaying every data
         document.getElementById("name").innerText = apiResult.name;
