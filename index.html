@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/index.js" defer></script>
+    <title>Covid Vaccine</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="input-section">
+            <h3>Check Vaccine Availability</h3>
+            <div class="input-bar">
+                <!-- <input type="text" placeholder="Enter city name" id="city"> -->
+                <input type="number" placeholder="Enter PinCode" id="input-pincode">
+                <input type="date" id="input-date" format="dd-mm-yyyy">
+                <button id="submit">Submit</button>
+            </div>
+        </div>
+        <div class="output-section">
+            <table class="output-table">
+                <tr>
+                    <td class="title">Center ID </td>
+                    <td class="value" id="center_id"></td>
+                </tr>
+                <tr>
+                    <td class="title">Name </td>
+                    <td class="value" id="name"></td>
+                </tr>
+                <tr>
+                    <td class="title">Address </td>
+                    <td class="value" id="address"></td>
+                </tr>
+                <tr>
+                    <td class="title">District </td>
+                    <td class="value" id="district"></td>
+                </tr>
+                <tr>
+                    <td class="title">PinCode </td>
+                    <td class="value" id="pincode"></td>
+                </tr>
+                <tr>
+                    <td class="title">Age group </td>
+                    <td class="value" id="min_age_limit"></td>
+                </tr>
+                <tr>
+                    <td class="title">Total Dose Available </td>
+                    <td class="value" id="available_capacity"></td>
+                </tr>
+                <tr>
+                    <td class="title">Dose 1 Available </td>
+                    <td class="value" id="available_capacity_dose1"></td>
+                </tr>
+                <tr>
+                    <td class="title">Dose 2 Available </td>
+                    <td class="value" id="available_capacity_dose2"></td>
+                </tr>
+                <tr>
+                    <td class="title">Fee </td>
+                    <td class="value" id="fee"></td>
+                </tr>
+                <tr>
+                    <td class="title">Vaccine </td>
+                    <td class="value" id="vaccine"></td>
+                </tr>
+                <tr>
+                    <td class="title">Date </td>
+                    <td class="value" id="date"></td>
+                </tr>
+                <tr>
+                    <td class="title">From Time </td>
+                    <td class="value" id="from"></td>
+                </tr>
+                <tr>
+                    <td class="title">To Time </td>
+                    <td class="value" id="to"></td>
+                </tr>
+                <tr>
+                    <td class="title">Slots </td>
+                    <td class="value" id="slots"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
