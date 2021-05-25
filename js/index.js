@@ -28,11 +28,11 @@ function getDate() {
 function getTable() {
 
     if (!apiResult) {
+        document.getElementsByClassName("output-section")[0].style.display = "none";
         document.getElementsByClassName("message")[0].innerHTML = "No Records<br><p>Please Refresh the page</p>";
         document.getElementsByTagName("BODY")[0].style.height = "100vh";
     }
     if (apiResult) {
-
         document.getElementsByClassName("output-section")[0].style.display = "block";
         document.getElementById("slots").innerHTML = "";
         document.getElementsByTagName("BODY")[0].style.height = "auto";
