@@ -29,12 +29,16 @@ function getTable() {
 
     if (!apiResult) {
         document.getElementsByClassName("output-section")[0].style.display = "none";
-        document.getElementsByClassName("message")[0].innerHTML = "No Records<br><p>Pobably the center has not updated the data.</p>";
+        document.getElementsByClassName("message")[0].innerHTML = "No Records<br><p>The center has not updated the data.</p>";
         // document.getElementsByTagName("BODY")[0].style.height = "100vh";
     }
     if (apiResult) {
+        //Eliminating errors and  adding UI changes for Success
         document.getElementsByClassName("output-section")[0].style.display = "block";
         document.getElementById("slots").innerHTML = "";
+        document.getElementsByClassName("message")[0] = "";
+
+        //Displaying every data
         document.getElementById("name").innerText = apiResult.name;
         document.getElementById("available_capacity").innerText = apiResult.available_capacity;
         document.getElementById("available_capacity_dose1").innerText = apiResult.available_capacity_dose1;
@@ -49,6 +53,8 @@ function getTable() {
         document.getElementById("from").innerText = apiResult.from;
         document.getElementById("to").innerText = apiResult.to;
         document.getElementById("district").innerText = apiResult.district_name;
+
+        //Displaying Slot timing data
         for (let i = 0; i < apiResult.slots.length; i++) {
             document.getElementById("slots").innerHTML += apiResult.slots[i] + "<br>";
         }
