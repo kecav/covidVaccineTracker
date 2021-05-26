@@ -26,7 +26,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    row-gap: 2rem;
+    row-gap: 1rem;
     transition: 0.3s;
 }
 
@@ -53,7 +53,6 @@ body {
 
 .output-section {
     transition: 1s all ease;
-    display: none;
     /* transform: translateY(-10px); */
 }
 
@@ -66,9 +65,28 @@ body {
     width: 100%;
 }
 
+.success {
+    color: green;
+    font-weight: 600;
+}
+
+.failure {
+    color: red;
+    font-weight: 600;
+}
+
 .title,
 .value {
     padding: 0.25rem;
+}
+
+.centerName {
+    margin: 1rem auto;
+    padding: 0.5rem 0.25rem;
+    background: coral;
+    color: #fff;
+    border-radius: 0.25rem;
+    text-align: center;
 }
 
 #submit {
@@ -85,7 +103,7 @@ body {
     background-color: rgb(255, 97, 40);
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
     body {
         display: grid;
         place-items: center;
