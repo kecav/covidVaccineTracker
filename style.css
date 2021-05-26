@@ -19,6 +19,7 @@ body {
 }
 
 .container {
+    margin: 2rem auto;
     padding: 2rem;
     background-color: #fff;
     border-radius: 1rem;
@@ -58,11 +59,14 @@ body {
 
 .output-section .title {
     font-weight: 600;
-    width: 50%;
+    /* width: 50%; */
 }
 
 .output-table {
     width: 100%;
+    border: 1px solid coral;
+    padding: 0.5rem;
+    border-radius: 1rem;
 }
 
 .success {
@@ -85,7 +89,7 @@ body {
     padding: 0.5rem 0.25rem;
     background: coral;
     color: #fff;
-    border-radius: 0.25rem;
+    border-radius: 0.5rem;
     text-align: center;
 }
 
@@ -97,6 +101,8 @@ body {
     border-radius: 0.5rem;
     cursor: pointer;
     transition: 0.3s all;
+    border: none;
+    outline: none;
 }
 
 #submit:hover {
@@ -110,6 +116,7 @@ body {
     }
     .container {
         border-radius: 0rem;
+        margin: 0;
     }
     .input-bar {
         flex-direction: column;
