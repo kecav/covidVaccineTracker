@@ -59,7 +59,7 @@ function makeTable() {
         //Adding Table name
         let centerName = document.createElement("h3");
         centerName.setAttribute("class", "centerName");
-        centerName.innerHTML = `CENTER ${i}`;
+        centerName.innerHTML = `CENTER ${i+1}`;
         outputSection.appendChild(centerName);
 
         //Creating Table for each center
