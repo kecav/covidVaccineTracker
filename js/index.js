@@ -9,7 +9,7 @@ let apiResult;
 
 //Array
 let array1 = ["Center ID", "Name", "Address", "District", "Pincode", "Minimum Age", "Total available vaccine", "Available Dose 1", "Available Dose 2", "Fee Type", "Fee (₹)", "Vaccine", "Date", "From", "To"];
-let array2 = ["center_id", "name", "address", "disctrict_name", "pincode", "min_age_limit", "available_capacity", "available_capacity_dose1", "available_capacity_dose2", "fee_type", "fee", "vaccine", "date", "from", "to"];
+let array2 = ["center_id", "name", "address", "district_name", "pincode", "min_age_limit", "available_capacity", "available_capacity_dose1", "available_capacity_dose2", "fee_type", "fee", "vaccine", "date", "from", "to"];
 
 //Get date in format of API
 function getDate() {
